@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Système de design FindSpeed : jetons tirés de la présentation ANaGeM.
+ * Documentation complète : front/DESIGN.md
+ */
+@theme {
+  /* Marque */
+  --color-jaune: #ffd21b; /* couleur dominante : fonds forts, boutons principaux */
+  --color-jaune-vif: #ffb800; /* accent : étiquettes et puces sur fond sombre */
+  --color-olive: #5b4c00; /* texte d'accent lisible sur fond clair ou jaune */
+
+  /* Neutres */
+  --color-encre: #1a1b1d; /* texte principal, blocs sombres */
+  --color-ardoise: #24282b; /* surfaces sombres */
+  --color-ardoise-clair: #2e3336; /* cartes posées sur une surface sombre */
+  --color-gris: #5a5a55; /* texte secondaire */
+  --color-gris-clair: #8b8d8a; /* légendes, pieds de page (texte non essentiel) */
+  --color-bordure-forte: #b9b9b4;
+  --color-bordure: #e7e3d8;
+  --color-creme: #fffdf7; /* fond de page */
+  --color-blanc: #ffffff; /* cartes sur fond crème */
+
+  /* Stock d'un produit */
+  --color-disponible: #1f9d55;
+  --color-peu: #e8850c; /* quelques pièces */
+  --color-rupture: #d93a2b;
+
+  /* Plan du marché (à valider, voir DESIGN.md) */
+  --color-plan-cabine: #ffd21b;
+  --color-plan-allee: #e7e3d8;
+  --color-plan-toilettes: #3b82c4;
+
+  /* Typographie */
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-titre: var(--font-barlow), "Arial Narrow", Arial, sans-serif;
+
+  /* Formes */
+  --radius-carte: 0.625rem;
+  --radius-icone: 22%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Étiquette de section, ex. « 05 · LE CONCEPT » */
+@utility etiquette {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-creme);
+  color: var(--color-encre);
+  font-family: var(--font-sans);
 }
