@@ -26,7 +26,7 @@
   --color-peu: #e8850c; /* quelques pièces */
   --color-rupture: #d93a2b;
 
-  /* Plan du marché (à valider, voir DESIGN.md) */
+  /* Plan du marché (validé) */
   --color-plan-cabine: #ffd21b;
   --color-plan-allee: #e7e3d8;
   --color-plan-toilettes: #3b82c4;
@@ -38,6 +38,37 @@
   /* Formes */
   --radius-carte: 0.625rem;
   --radius-icone: 22%;
+
+  /* Mouvements */
+  --animate-apparition: apparition 0.6s ease-out both;
+  --animate-signal: signal 1.8s ease-out infinite;
+
+  @keyframes apparition {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+
+  /* Anneau qui s'élargit autour de la cabine trouvée */
+  @keyframes signal {
+    from {
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(2.4);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
 }
 
 /* Étiquette de section, ex. « 05 · LE CONCEPT » */

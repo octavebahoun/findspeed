@@ -43,7 +43,7 @@ Comme dans la présentation : une pastille de couleur **suivie du mot** en `encr
 | `peu` | `#E8850C` | Quelques pièces |
 | `rupture` | `#D93A2B` | Rupture |
 
-### Plan du marché (à valider)
+### Plan du marché (validé)
 
 L'Excel source code les cases en jaune (cabine), vert (allée) et rouge (toilettes). Sur l'app, le vert et le rouge sont déjà pris par le stock, donc le plan utilise :
 
