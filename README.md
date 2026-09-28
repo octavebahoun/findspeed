@@ -56,3 +56,13 @@ Couleurs de l'Excel source du plan : **jaune** = cabine, **vert** = allée, **ro
 ## Planning
 
 Le planning semaine par semaine est dans le [cahier de tâches Notion](https://buttoned-crowberry-bb0.notion.site/FindSpeed-V1-Cahier-de-t-ches-3e57e9c54aad81079163e85cabd9bf4d).
+
+## Lancer le front
+
+```bash
+cd front
+npm install
+npm run dev     # développement (service worker désactivé)
+npm run build   # build Next.js + génération du service worker (Serwist)
+npm start
+```
