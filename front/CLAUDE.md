@@ -1,1 +1,3 @@
 @AGENTS.md
+@CONVENTIONS.md
+@DESIGN.md

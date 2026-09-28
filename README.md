@@ -59,6 +59,8 @@ Le planning semaine par semaine est dans le [cahier de tâches Notion](https://b
 
 ## Lancer le front
 
+Avant de coder : lire [front/CONVENTIONS.md](front/CONVENTIONS.md) (règles obligatoires) et [front/DESIGN.md](front/DESIGN.md) (système de design).
+
 ```bash
 cd front
 npm install
