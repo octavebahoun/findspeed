@@ -17,7 +17,7 @@ export default function EnTete() {
       </Link>
       <Link
         href="/connexion"
-        className="rounded-carte px-3 py-2 text-sm font-bold underline-offset-4 hover:underline"
+        className="rounded-carte bg-jaune px-3 py-2 text-sm font-bold transition-transform active:scale-95"
       >
         Espace vendeur
       </Link>

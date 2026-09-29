@@ -57,11 +57,9 @@ src/app/
 (accueil)/
 ├── page.tsx                 # assemble Heros, Etapes, Promesse, AppelVendeurs, PiedDePage
 └── _components/
-    ├── Heros.tsx            # utilise EnTete, FormulaireRecherche, PlanApercu, LegendePlan
+    ├── Heros.tsx            # utilise EnTete, FormulaireRecherche
     ├── EnTete.tsx
     ├── FormulaireRecherche.tsx
-    ├── PlanApercu.tsx
-    ├── LegendePlan.tsx
     ├── Etapes.tsx
     ├── Promesse.tsx         # utilise FicheExemple
     ├── FicheExemple.tsx

@@ -90,7 +90,7 @@ Tailles sur mobile : titre de page `text-3xl`, titre de bloc `text-xl`, texte `t
 - **Pied discret** : « EXCELLENCE TEAM · FINDSPEED » en `etiquette` + `gris-clair`.
 - **Slogan** : « Trouvez. Localisez. Achetez. » en italique gras.
 
-## Logo et icônes
+## Logo, icônes et photos
 
 | Fichier | Usage |
 | --- | --- |
@@ -99,5 +99,15 @@ Tailles sur mobile : titre de page `text-3xl`, titre de bloc `text-xl`, texte `t
 | `public/icon-192.png`, `icon-512.png` | Icônes PWA |
 | `public/icon-maskable-*.png` | Icônes PWA Android (fond jaune, marge de sécurité) |
 | `src/app/icon.png`, `apple-icon.png` | Onglet du navigateur, écran d'accueil iPhone |
+| `public/images/pk3-hangar.jpg` | Photo du hangar de PK3, fond du héros de l'accueil (droits à confirmer) |
 
 ⚠️ Ces fichiers viennent de la présentation (286 px de large). Il faut le **fichier original du logo en haute définition** pour avoir une icône 512 px nette.
+
+## Héros avec photo
+
+Photo en arrière-plan, texte à gauche, et un **remplissage blanc** par-dessus la photo :
+
+- ordinateur : blanc plein sous le texte, qui s'efface vers la droite (dégradé horizontal) ;
+- téléphone : blanc plein en haut sous le texte, la photo apparaît en bas (dégradé vertical).
+
+Un mot clé du titre est surligné en `jaune` pour garder la couleur de marque.
