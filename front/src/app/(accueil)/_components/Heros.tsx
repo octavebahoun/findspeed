@@ -5,31 +5,36 @@ import FormulaireRecherche from "./FormulaireRecherche";
 
 export default function Heros() {
   return (
-    <header className="relative isolate overflow-hidden bg-blanc">
+    <header className="relative isolate overflow-hidden bg-jaune">
       {/* Photo du hangar de PK3, en arrière-plan */}
-      <Image
-        src="/images/pk3-hangar.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-20 object-cover object-[70%_center]"
-      />
-      {/* Remplissage blanc : plein sous le texte, s'efface vers la droite */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-blanc from-55% via-blanc/60 via-65% to-transparent to-80% md:bg-linear-to-r md:from-35% md:via-blanc/75 md:via-50% md:to-80%" />
+      <div className="relative h-56 md:absolute md:inset-0 md:h-auto">
+        <Image
+          src="/images/pk3-hangar.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[70%_center]"
+        />
+        {/* Assombrissement léger, pour la lisibilité du bouton « Espace vendeur » sur téléphone */}
+        <div className="absolute inset-0 bg-linear-to-b from-encre/25 to-transparent md:hidden" />
+      </div>
 
-      <EnTete />
+      {/* Diagonale jaune qui coupe la photo (ordinateur) */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[62%] bg-jaune [clip-path:polygon(0_0,100%_0,78%_100%,0_100%)] md:block" />
 
-      <div className="mx-auto flex min-h-[680px] max-w-5xl flex-col px-4 pb-16 pt-8 md:min-h-[560px] md:justify-center md:pt-4">
+      <div className="relative z-10">
+        <EnTete />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-5xl px-4 pb-12 pt-8 md:min-h-[560px] md:pb-16 md:pt-32">
         <div className="max-w-lg">
           <p className="etiquette animate-apparition text-olive">
             Marché de PK3 · Cotonou
           </p>
           <h1 className="font-titre mt-3 animate-apparition text-5xl font-bold leading-[0.95] [animation-delay:80ms] md:text-6xl">
             Le marché de PK3,{" "}
-            <span className="bg-jaune box-decoration-clone px-1 md:whitespace-nowrap">
-              à portée de clic.
-            </span>
+            <span className="md:whitespace-nowrap">à portée de clic.</span>
           </h1>
           <p className="mt-4 animate-apparition text-lg font-bold italic [animation-delay:160ms]">
             « Trouvez. Localisez. Achetez. »
